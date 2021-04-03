@@ -1,0 +1,212 @@
+.Container {
+  width: 30%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--menu-background);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  
+  border-right: solid 1px;
+  border-color: var(--grey-line);
+}
+
+.Profile {
+  min-height: 60px;
+  width: 100%;
+
+  background-color: var(--grey-bar);
+  border-top-left-radius: 10px;
+
+  margin-bottom: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media(max-width: 1400px) {
+  .Container {
+    border-radius: 0px;
+  }
+
+  .Profile {
+    border-radius: 0px;
+  }
+}
+
+
+.ProfileUser {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.ProfileUser img {
+  margin-left: 15px;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+}
+
+.ProfileUser p {
+  margin-left: 15px;
+  margin-right: 15px;
+
+  font-size: 18px;
+
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.ProfileOptions {
+  display: flex;
+  align-items: center;
+
+}
+
+.ProfileOptions button {
+  margin-right: 15px;
+
+  outline: none;
+  border: none;
+  background: transparent;
+
+  color: var(--text-primary);
+}
+
+.SearchNoteGroup {
+  width: 80%;
+  height: 35px;
+  background-color: var(--menu-search-background);
+  margin-bottom: 15px;
+
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+.SearchNoteGroup button {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--text-secondary);
+
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  margin-left: 10px;
+}
+
+.SearchNoteGroup input {
+  color: var(--text-secondary);
+  background: transparent;
+
+  margin: 0 10px;
+  width: 100%;
+
+  font-size: 14px;
+
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  outline: none;
+  border: none;
+}
+
+.SearchNoteGroup input:focus {
+  text-overflow: clip;
+}
+
+.NoteGroupList {
+  width: 100%;
+  max-height: 76%;
+  
+  display: flex;
+  flex-direction: column;
+
+  overflow: auto;
+}
+
+.NoteGroupList::-webkit-scrollbar {
+  width: 8px;
+}
+   
+.NoteGroupList::-webkit-scrollbar-track {
+  background:var(--menu-group);
+}
+   
+.NoteGroupList::-webkit-scrollbar-thumb {
+  background: var(--grey-line);
+}
+
+.NoteGroupList::-webkit-scrollbar-thumb:hover {
+  background: var(--light-grey);
+}
+
+.NoteGroupItem {
+  min-height: 70px;
+
+  border-bottom: 1px solid;
+  border-color: var(--grey-line);
+
+  display: flex;
+  align-items: center;
+
+  background-color: var(--menu-group);
+  transition: background-color 0.2s;
+}
+
+.NoteGroupItem:hover {
+  background-color: var(--menu-selected-group);
+}
+
+.NoteGroupItem img {
+  margin-left: 15px;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+}
+
+.NoteGroupItem p {
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 80%;
+
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  font-size: 18px;
+}
+
+.AddNoteGroup {
+  min-height: 35px;
+  width: 100%;
+
+  outline: none;
+  border: none;
+  color: var(--text-primary);
+  background-color: var(--menu-group);
+  
+  transition: background-color 0.2s;
+}
+
+.AddNoteGroup:hover {
+  background-color: var(--menu-selected-group);
+}

@@ -1,0 +1,158 @@
+.Container {
+  width: 70%;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  background: url('/assets/papel-de-parede-adesivo-colorir-summer-summer (cópia).jpg');
+  background-size: 70vh, contain;
+
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.Header {
+  min-height: 60px;
+  width: 100%;
+
+  background-color: var(--grey-bar);
+  border-top-right-radius: 10px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media(max-width: 1400px) {
+  .Container {
+    border-radius: 0px;
+  }
+
+  .Header {
+    border-radius: 0px;
+  }
+}
+
+.Group {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.Group img {
+  margin-left: 15px;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+}
+
+.Group p {
+  margin-left: 15px;
+  margin-right: 15px;
+
+  font-size: 16px;
+
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.Options {
+  margin-right: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-width: rem;
+  min-width: 63px;
+}
+
+.Options button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  color: var(--text-primary);
+  display: flex;
+}
+
+.NotesPanel {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+
+}
+
+.NotesContainer {
+  width: 100%;
+
+  column-count: auto;
+  column-gap: auto;
+  column-width: 240px;
+
+}
+
+.NotesPanel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.NotesPanel::-webkit-scrollbar-track {
+  background:var(--menu-group);
+
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+   
+.NotesPanel::-webkit-scrollbar-thumb {
+  background: var(--grey-line);
+}
+
+.NotesPanel::-webkit-scrollbar-thumb:hover {
+  background: var(--light-grey);
+}
+
+@media(max-width: 1400px) {
+  .NotesPanel {
+    height: 100%;
+  }
+}
+
+.AddNote {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 30px;
+  bottom: 30px;
+}
+
+.AddNote button {
+  width: 50px;
+  height: 50px;
+  
+  border-radius: 50%;
+  border: none;
+  outline: none;
+    
+  background-color: var(--blue);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--text-primary);
+
+  transition: filter 0.2s;
+}
+
+.AddNote button:hover {
+  filter: brightness(0.9);
+}
